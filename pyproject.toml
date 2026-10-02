@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "apidbn"
+version = "1.0.0"
+description = "Adaptive Physics-Informed Dynamic Bayesian Network for Subsea Pipeline Reliability and Maintenance"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Devesh Shukla", email = "devesh253000@iiitnr.edu.in"},
+    {name = "Vinay Kumar", email = "vinay@iiitnr.edu.in"}
+]
+dependencies = [
+    "numpy>=1.24.0",
+    "scipy>=1.10.0",
+    "matplotlib>=3.7.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

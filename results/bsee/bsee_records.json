@@ -1,0 +1,133 @@
+{
+  "source": "https://edx.netl.doe.gov/dataset/us-offshore-pipeline-and-reported-incident-datasets",
+  "doi": "10.18141/2280823",
+  "sha256": {
+    "pipeline_incidents.csv": "66d3f0f0681dc7a0529c09115cc0404a5d5cbd3e0912e4961665032aa79b35ea",
+    "pipeline_locations.csv": "1f7b730651f0960727889321c16cb8337707f79bfe1c956e0a3f559e57851c59",
+    "pipeline_incidents_data_dictionary.csv": "9a8f4b2ccba1cdd930a2a7c687b224ae2ce7399c36cdb685f84a393e0a0f1351",
+    "pipeline_location_data_dictionary.csv": "ad6d47cb4d8305403c0248f561c4adea131111ae2ef8e97a61850769aabf8d7b"
+  },
+  "incidents": {
+    "records": 943,
+    "fields": 85,
+    "by_source": {
+      "BSEE": 54,
+      "PHMSA": 889
+    },
+    "years": [
+      1986,
+      2021
+    ],
+    "per_year": {
+      "1986": 11,
+      "1987": 14,
+      "1988": 15,
+      "1989": 22,
+      "1990": 20,
+      "1991": 10,
+      "1992": 26,
+      "1993": 26,
+      "1994": 32,
+      "1995": 23,
+      "1996": 20,
+      "1997": 26,
+      "1998": 38,
+      "1999": 22,
+      "2000": 20,
+      "2001": 14,
+      "2002": 26,
+      "2003": 17,
+      "2004": 49,
+      "2005": 91,
+      "2006": 42,
+      "2007": 41,
+      "2008": 53,
+      "2009": 40,
+      "2010": 34,
+      "2011": 26,
+      "2012": 28,
+      "2013": 24,
+      "2014": 28,
+      "2015": 24,
+      "2016": 9,
+      "2017": 24,
+      "2018": 13,
+      "2019": 14,
+      "2020": 12,
+      "2021": 9
+    },
+    "with_lease_block": 881,
+    "distinct_lease_blocks": 487,
+    "internal_corrosion": 355,
+    "external_corrosion": 94,
+    "any_corrosion": 423,
+    "outside_force_damage": 158,
+    "diameter_in": {
+      "reported": 779,
+      "median": 12.75,
+      "at_least_case": 95
+    },
+    "wall_in": {
+      "reported": 734,
+      "empty": 166,
+      "median": 0.41,
+      "at_least_case": 20
+    },
+    "smys_psi": {
+      "reported": 705,
+      "most_common": [
+        [
+          52000.0,
+          250
+        ],
+        [
+          42000.0,
+          137
+        ],
+        [
+          60000.0,
+          109
+        ]
+      ],
+      "case_grade": 250
+    },
+    "cost_2021_usd": {
+      "positive": 831,
+      "median": 325933.5268,
+      "mean": 2839015.604770702,
+      "max": 838722735.5,
+      "below_c_fail": 762
+    }
+  },
+  "locations": {
+    "points": 89986,
+    "columns": 495,
+    "segments": 14241,
+    "conflicting_segment_values": {},
+    "status": {
+      "ABN": 8815,
+      "ACT": 2729,
+      "REM": 1024,
+      "OUT": 938,
+      "PABN": 422,
+      "A/C": 183,
+      "PREM": 90,
+      "PROP": 37,
+      "CNCL": 2,
+      "COMB": 1
+    },
+    "installed_segments": 14202,
+    "installed_length_km": 64334.1448392,
+    "size_code": {
+      "numeric": 13792,
+      "median_in": 6.0,
+      "at_least_case": 205
+    },
+    "exposure": {
+      "segments": 11236,
+      "segment_years": 185497.49212867822
+    }
+  },
+  "incidents_per_segment_year": 0.005083626679684963,
+  "c_fail_percentile": 91.69675090252707
+}

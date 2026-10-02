@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software or results in your research, please cite it as below."
+title: "An Adaptive Physics-Informed Framework for Subsea Pipeline Reliability and Maintenance"
+authors:
+  - family-names: "Shukla"
+    given-names: "Devesh"
+    email: "devesh253000@iiitnr.edu.in"
+    affiliation: "Department of Computer Science and Engineering, IIIT Naya Raipur, India"
+  - family-names: "Kumar"
+    given-names: "Vinay"
+    email: "vinay@iiitnr.edu.in"
+    affiliation: "Department of Computer Science and Engineering, IIIT Naya Raipur, India"
+version: "1.0.0"
+date-released: "2026-09-29"
+url: "https://github.com/Deveshshukla36/adaptive-physics-informed-dbn"
+repository-code: "https://github.com/Deveshshukla36/adaptive-physics-informed-dbn"
+keywords:
+  - dynamic bayesian network
+  - subsea pipelines
+  - sequential monte carlo
+  - corrosion
+  - random shocks
+  - remaining useful life
+  - maintenance optimization
+license: "MIT"

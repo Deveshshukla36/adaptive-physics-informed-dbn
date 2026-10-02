@@ -1,0 +1,44 @@
+{
+  "_description": "Physical parameters of the subsea pipeline and degradation process (Table IV)",
+  "geometry": {
+    "outer_diameter_mm": 610.0,
+    "outer_diameter_in": 24.0,
+    "wall_thickness_mm": 19.1,
+    "defect_length_mm": 500.0,
+    "note": "24-inch trunkline (only ~1.5% of Gulf of Mexico segments are >=24 in)"
+  },
+  "material_and_operating": {
+    "SMYS_MPa": 358.0,
+    "operating_pressure_MPa": 10.0,
+    "intact_burst_pressure_MPa": 23.143679,
+    "critical_failure_depth_mm": 12.070919,
+    "critical_failure_fraction": 0.631985,
+    "burst_model_type": "simplified DNV-RP-F101/B31G-type burst-pressure model"
+  },
+  "corrosion": {
+    "mu_base_mm_per_yr": 0.44,
+    "sigma_B_mm_per_sqrt_yr": 0.20,
+    "W0_mm": 1.0,
+    "alpha": 2.0,
+    "r_s_per_mm": 0.5,
+    "zero_damage_gain": 1.377541,
+    "min_effective_drift_mm_per_yr": 0.606118,
+    "transition_width_10_90_mm": 8.788898
+  },
+  "shocks": {
+    "lambda_base_per_yr": 0.8,
+    "lambda_status": "Assumption (reported incident rate in BSEE data is <= 0.0051 / segment-yr)",
+    "mu_y0_mm": 0.32,
+    "sigma_y0_mm": 0.15,
+    "kappa": 0.30,
+    "eta": 0.50,
+    "expected_damage_per_shock_mm": 0.166411,
+    "gamma1_per_mm": 0.05,
+    "gamma2": 0.02,
+    "E_covariate": 0.0
+  },
+  "inspection": {
+    "sigma_v_mm": 0.10,
+    "note": "Idealized inspection accuracy"
+  }
+}

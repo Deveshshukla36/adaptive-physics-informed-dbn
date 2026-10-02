@@ -1,0 +1,119 @@
+{
+  "failure_depth": {
+    "P0_MPa": 23.143679,
+    "folias_M": 4.262148,
+    "dcrit_as_printed_mm": 12.070919,
+    "dcrit_fraction_of_wall": 0.631985,
+    "dcrit_0.31_SMYS_mm": 12.855215,
+    "dcrit_0.31_SMTS455_mm": 14.373067
+  },
+  "sigmoid": {
+    "gain_at_Z0": 1.377541,
+    "gain_at_W0": 1.5,
+    "gain_at_dcrit": 1.996071,
+    "width_10_90_mm": 8.788898,
+    "min_mean_drift_mm_per_yr": 0.606118
+  },
+  "shock_damage": {
+    "E_dS_eq4_mm": 0.166411,
+    "E_dS_direct_mm": 0.326251,
+    "P_Y_negative_untruncated": 0.016449
+  },
+  "arithmetic": {
+    "MAE_reduction": 0.657143,
+    "RMSE_reduction": 0.655689,
+    "cost_reduction": 0.343737
+  },
+  "paired_t_lower_bounds": {
+    "MAE": {
+      "t_min": 35.273333,
+      "p_max_two_sided": 0.0
+    },
+    "RMSE": {
+      "t_min": 38.693948,
+      "p_max_two_sided": 0.0
+    },
+    "CRPS": {
+      "t_min": 44.27424,
+      "p_max_two_sided": 0.0
+    },
+    "Brier": {
+      "t_min": 34.689095,
+      "p_max_two_sided": 0.0
+    }
+  },
+  "picp": {
+    "values_reachable_with_N30": [
+      0.9333,
+      0.9667
+    ],
+    "smallest_N_giving_94.8pct": 58,
+    "binomial_se_at_N1000_pp": 0.689202
+  },
+  "costs": {
+    "inspection_PV_I2_t2to20": 303.95635,
+    "inspection_PV_I2_t0to18": 335.111876,
+    "inspection_PV_I2_t2to18": 285.111876,
+    "failure_cost_PV_at_12.5yr": 8151.265155,
+    "PM_cost_PV_at_11yr": 116.935858
+  },
+  "fig4": {
+    "low": {
+      "lambda": 0.3,
+      "mean_Z20_mm": 17.978311,
+      "p05_Z20_mm": 16.087337,
+      "p95_Z20_mm": 19.851101,
+      "median_failure_yr": 14.0,
+      "p05_failure_yr": 12.5,
+      "p95_failure_yr": 15.7,
+      "P_fail_by_20yr": 1.0
+    },
+    "moderate": {
+      "lambda": 0.8,
+      "mean_Z20_mm": 20.642283,
+      "p05_Z20_mm": 18.333306,
+      "p95_Z20_mm": 22.994424,
+      "median_failure_yr": 12.5,
+      "p05_failure_yr": 11.0,
+      "p95_failure_yr": 14.2,
+      "P_fail_by_20yr": 1.0
+    },
+    "high": {
+      "lambda": 1.5,
+      "mean_Z20_mm": 24.387686,
+      "p05_Z20_mm": 21.58933,
+      "p95_Z20_mm": 27.22377,
+      "median_failure_yr": 11.0,
+      "p05_failure_yr": 9.5,
+      "p95_failure_yr": 12.6,
+      "P_fail_by_20yr": 1.0
+    },
+    "corrosion_only": {
+      "mean_Z20_mm": 16.365137,
+      "sd_Z20_mm": 0.979234
+    },
+    "moderate_if_dS_equals_Y": {
+      "median_failure_yr": 10.9
+    }
+  },
+  "fig5": {
+    "scenario_A": {
+      "R_at_10yr": 0.9977,
+      "R_at_15yr": 0.0072,
+      "median_life_yr": 12.5,
+      "p05_life_yr": 11.0,
+      "p95_life_yr": 14.2
+    },
+    "scenario_B": {
+      "R_at_10yr": 0.8143,
+      "R_at_15yr": 0.206,
+      "median_life_yr": 12.4,
+      "p05_life_yr": 8.5,
+      "p95_life_yr": 18.505
+    },
+    "example_pipeline": {
+      "true_failure_yr": 10.2,
+      "true_mu": 0.538002
+    }
+  }
+}

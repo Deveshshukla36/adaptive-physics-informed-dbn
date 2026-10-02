@@ -1,0 +1,47 @@
+{
+  "_description": "Simulation, inference, and experimental design parameters",
+  "discretization": {
+    "dt_yr": 0.1,
+    "steps_per_year": 10,
+    "horizon_yr": 20.0,
+    "total_steps_K": 200
+  },
+  "scenarios": {
+    "Scenario_A": {
+      "description": "Literal Table IV parameters, identical across all pipelines and constant over time",
+      "purpose": "Demonstrates baseline behavior when ground truth is static and known",
+      "test_pipelines_per_seed": 100,
+      "total_pipelines": 3000,
+      "total_forecasts": 36090
+    },
+    "Scenario_B": {
+      "description": "Heterogeneous, drifting parameters across pipelines",
+      "parameter_distribution": "Table IV * exp(N(0, 0.25^2))",
+      "yearly_drift": "log-random walk with standard deviation 0.05 per year",
+      "purpose": "Primary adaptive evaluation representing asset diversity and environmental evolution",
+      "test_pipelines_per_seed": 333,
+      "total_pipelines": 9990,
+      "total_forecasts": 121091
+    }
+  },
+  "protocol": {
+    "n_matched_runs": 30,
+    "seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29],
+    "inspection_schedule": "annual from t = 1.0 yr",
+    "particle_count_M": 1000,
+    "resampling_threshold": "ESS < M / 2",
+    "mcmc_rejuvenation_sweeps": 5,
+    "forecast_trajectories_J": 10000,
+    "point_prediction": "median of J RUL samples",
+    "brier_evaluation_window_yr": 2.0
+  },
+  "models": [
+    "Fixed Wiener",
+    "Static DBN",
+    "PF w/o MCMC",
+    "No coupling",
+    "API-DBN",
+    "No coupling, w/o MCMC",
+    "Oracle (true parameters)"
+  ]
+}

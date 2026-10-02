@@ -1,0 +1,60 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Testing and tool caches
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Operating system files
+.DS_Store
+__MACOSX/
+._*
+Thumbs.db
+Desktop.ini
+
+# IDE and editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.ipynb_checkpoints/
+
+# Private / internal notes (must not be part of public repository)
+.private/
+private_notes/
+*.docx
+
+# Raw external datasets
+data/raw/
+data/netl_pipelines/
+
+# Archive files
+# results/raw_results.zip is a 61 MB generated archive (1325 .npz task files).
+# It can be reproduced by running the full simulation (see docs/reproducibility.md).
+# For archival distribution, prefer a Zenodo/GitHub Release attachment.
+*.zip
+!paper/Revised_Paper_Overleaf.zip
+
+# Temporary experiment outputs and caches
+checkpoints/
+
+# LaTeX auxiliary files
+*.aux
+*.log
+*.bbl
+*.blg
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
