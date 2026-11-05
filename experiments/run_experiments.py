@@ -1,7 +1,7 @@
 """Master experiment runner and reproducibility dispatcher.
 
 Coordinates and reproduces the experiments reported in the paper:
-1. Closed-form checks and verification (Fig. 4 & 5 replicas)
+1. Closed-form checks and verification (Figures 4 & 5)
 2. RUL prognostics evaluation (Scenario A & B, Table VI)
 3. 2x2 Factorial ablation study (Table VII)
 4. Closed-loop maintenance optimization (Fig. 6 & Table V/VI)

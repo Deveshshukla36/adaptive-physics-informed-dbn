@@ -1,4 +1,4 @@
-"""Table VI / VII replica: all models on the same simulated pipelines, 30 matched seeds.
+"""RUL prediction experiment runner for Tables VI and VII across 30 matched seeds.
 
 Each task (scenario, seed, chunk) writes one .npz, so an interrupted run resumes
 where it stopped. Usage:

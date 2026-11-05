@@ -142,6 +142,6 @@ If $\mathrm{RUL}_{0.10} \le \gamma$, preventive replacement is scheduled, resett
 ### 5.2 Lifecycle Cost Criterion
 Total expected discounted cost over a 20-year horizon at discount rate $r = 0.05$:
 
-$$\mathbb{E}[C] = \mathbb{E}\left[ \sum_{j} C_{\mathrm{ins}} e^{-r t_{\mathrm{ins}, j}} + \sum_{l} C_{\mathrm{prev}} e^{-r t_{\mathrm{prev}, l}} + \sum_{m} (C_{\mathrm{fail}} + C_{\mathrm{env}}) e^{-r t_{\mathrm{fail}, m}} \right]$$
+$$\mathbb{E}[C] = \mathbb{E}\left[ \sum_{j} \frac{C_{\mathrm{ins}}}{(1+r)^{t_{\mathrm{ins}, j}}} + \sum_{l} \frac{C_{\mathrm{prev}}}{(1+r)^{t_{\mathrm{prev}, l}}} + \sum_{m} \frac{C_{\mathrm{fail}} + C_{\mathrm{env}}}{(1+r)^{t_{\mathrm{fail}, m}}} \right]$$
 
 Costs are evaluated closed-loop against ground-truth pipeline evolution rather than internal model forecasts.

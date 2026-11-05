@@ -1,6 +1,6 @@
-"""Sec. V-B replica: grid search of (I, gamma) with closed-loop, ground-truth costs.
+"""Closed-loop maintenance policy grid search over (I, gamma) (Section V-B).
 
-Usage: python experiments/run_maintenance.py --scenario B --pipes 2000
+Usage: python experiments/run_maintenance.py --scenario B --pipes 1500
 Writes one .npz per (model, chunk) to results/maint_<scenario>/, then summarises
 to results/maintenance_<scenario>.json and figures/fig6_replica_<scenario>.png.
 """

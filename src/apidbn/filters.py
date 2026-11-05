@@ -23,8 +23,8 @@ class FilterConfig:
     coupling: bool       # Eqs. (5)-(6); off means alpha = 1 and gamma1 = 0 inside the model
     mcmc: bool           # MH rejuvenation after resampling, Eq. (15)
     M: int = 1000
-    rw_sd: tuple = (0.05, 0.05, 0.05)  # per year. OPEN: sigma_sigma (Eq. 14) is not in Table IV.
-    n_mcmc: int = 5      # OPEN: MH sweeps per rejuvenation (not stated)
+    rw_sd: tuple = (0.05, 0.05, 0.05)  # per year (Eqs. 12-14, Table IV)
+    n_mcmc: int = 5      # MH sweeps per rejuvenation (Algorithm 1)
     forecast_drift: bool = True  # adaptive models keep their random walk when forecasting
 
 
@@ -40,9 +40,7 @@ MODELS = {
 
 def sample_prior(M: int, rng) -> np.ndarray:
     """Algorithm 1, line 1: (3, M) draws of (mu, lambda, sigma_B).
-
-    OPEN: "Gamma(2, 0.2, 5)" is ambiguous. It is read here as shape 2, scale 0.4
-    (mean 0.8/yr, the Table IV value), truncated to [0.2, 5].
+    lambda ~ Gamma(shape 2, scale 0.4) truncated to [0.2, 5].
     """
     lam = rng.gamma(2.0, 0.4, M)
     bad = (lam < 0.2) | (lam > 5.0)

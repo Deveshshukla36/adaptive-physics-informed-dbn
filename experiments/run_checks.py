@@ -1,4 +1,4 @@
-"""Closed-form checks of the manuscript's numbers and replicas of Figs. 4 and 5.
+"""Physics verification checks and generation of Figures 4 and 5.
 
 Writes results/checks.json, figures/fig4_replica.png and figures/fig5_replica.png.
 """

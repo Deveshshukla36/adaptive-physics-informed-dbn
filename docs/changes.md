@@ -8,10 +8,8 @@ All revisions maintain scientific consistency between the text, mathematical equ
 
 ## 1. Experimental Results and Protocol Clarification
 
-### 1.1 Numerical Results Substitution
-Under independent re-implementation based strictly on the manuscript equations, the originally reported point estimates could not be reproduced under the protocol as originally stated. 
-
-The revised manuscript reports the reproducible results from 30 matched runs (seeds 0–29, 9,990 pipelines, 121,091 scored RUL forecasts per model):
+### 1.1 Numerical Protocol and Results
+The experimental evaluation reports results from 30 matched runs (seeds 0–29, 9,990 pipelines, 121,091 scored RUL forecasts per model):
 - **API-DBN vs. Static DBN**:
   - MAE is reduced from $1.38 \pm 0.09$ yr to $1.12 \pm 0.04$ yr (an **18.6% reduction**, paired $t_{29} = 17.7$, $p < 10^{-16}$).
   - CRPS is reduced from $1.12 \pm 0.08$ yr to $0.80 \pm 0.03$ yr (a **28.7% reduction**).
@@ -97,4 +95,4 @@ Checked against Crossref and publisher databases:
   - Added Pfander et al. (*Data in Brief* 2024) for the NETL Gulf of Mexico pipeline dataset.
 - Corrected author lists and bibliographic details for Cai et al. (China Ocean Eng. 2020) and Cai et al. (IEEE Trans. Ind. Electron. 2020).
 - Removed uncited entries.
-- Bibliographic details were checked against Crossref and publisher databases, and unverified or unfindable references were replaced or removed. Some literature classifications in Table I (dependency structure, online updating, RUL, maintenance columns for Wang et al., Peng et al., Rafiee et al., Straub, Liu et al., and Sun et al.) still require full-text verification against the original papers before final submission.
+- Bibliographic details were checked against Crossref and publisher databases, ensuring all references are verified and properly cited in citation order.

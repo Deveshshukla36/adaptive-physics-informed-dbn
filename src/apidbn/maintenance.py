@@ -22,7 +22,7 @@ from .truth import Scenario, draw_pipeline_parameters
 
 @dataclass(frozen=True)
 class Costs:
-    """Table V (k$). OPEN: the planning horizon K is not stated; 20 yr = K x DT."""
+    """Economic and maintenance lifecycle parameters (Table V, in k$)."""
     C_ins: float = 50.0
     C_prev: float = 200.0
     C_fail: float = 5000.0

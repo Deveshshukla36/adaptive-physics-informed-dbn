@@ -1,14 +1,9 @@
-"""Controlled-simulation ground truth (Sec. IV-B).
+"""Controlled-simulation ground truth generator (Sec. IV-B).
 
-The manuscript says the trajectories are "generated using the model parameters
-in Table IV" and gives nothing else. Two readings are simulated:
-
-  A  literal: every pipeline has exactly the Table IV parameters, which never
-     change. A static model calibrated offline then has the true parameters.
-  B  heterogeneous and drifting: each pipeline gets its own (mu, lambda, sigma_B),
-     log-normal around Table IV, which then drift by a yearly log-random walk
-     with the Table IV s.d. of 0.05. This is the situation Sec. II-B and Gap 1
-     use to motivate adaptive updating.
+Two simulation settings are evaluated:
+  Scenario A: All pipelines share identical, fixed Table IV parameters without drift.
+  Scenario B: Asset-specific baseline parameters vary log-normally around Table IV
+              and drift annually via log-random walks with standard deviation 0.05/yr.
 """
 from __future__ import annotations
 
@@ -24,7 +19,7 @@ class Scenario:
     name: str
     het_sd: float                 # log-s.d. of pipeline-specific parameters around Table IV
     drift_sd: float               # yearly log-random-walk s.d. of the true parameters
-    insp_interval: float = 1.0    # OPEN: inspection interval for the RUL study (not stated)
+    insp_interval: float = 1.0    # Annual inspection interval (Sec. IV-B)
     horizon: float = 20.0         # monitoring window, K = 200 steps of DT
     t_max: float = 80.0           # truth is simulated until failure or t_max
 

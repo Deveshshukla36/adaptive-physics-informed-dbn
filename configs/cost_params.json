@@ -3,13 +3,13 @@
   "costs_USD": {
     "failure_cost_C_fail": 5000000.0,
     "environmental_cost_C_env": 10000000.0,
-    "preventive_replacement_C_prev": 100000.0,
-    "inspection_cost_C_ins": 30000.0,
+    "preventive_replacement_C_prev": 200000.0,
+    "inspection_cost_C_ins": 50000.0,
     "note_C_fail": "Higher than 91.7% of reported incident costs in the BSEE/PHMSA database"
   },
   "financial": {
     "discount_rate_r": 0.05,
-    "discounting_type": "continuous exp(-r * t)",
+    "discounting_type": "annual (1 + r)^(-t)",
     "planning_horizon_yr": 20.0
   },
   "policy_search_grid": {

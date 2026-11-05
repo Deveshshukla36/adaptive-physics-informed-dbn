@@ -1,7 +1,7 @@
-"""Publication-size figures for the revised manuscript (IEEE column width 3.5 in).
+"""Publication-size figures for the manuscript (IEEE column width 3.5 in).
 
-Figs. 1-3 are the method diagrams, redrawn; Figs. 4-6 come from the replica with
-the same seeds as run_checks.py and extend_gamma.py, so the numbers quoted in
+Figs. 1-3 are the method diagrams; Figs. 4-6 are generated from the simulation
+with the seeds of run_checks.py and extend_gamma.py, so the numbers quoted in
 the text match the plots. Usage: python experiments/make_paper_figures.py [--fig6]
 """
 from __future__ import annotations

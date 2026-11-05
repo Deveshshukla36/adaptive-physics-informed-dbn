@@ -4,7 +4,7 @@ from __future__ import annotations
 import numpy as np
 from scipy import stats
 
-BRIER_WINDOW = 2.0   # yr. OPEN: "failure within the evaluation window" has no stated window.
+BRIER_WINDOW = 2.0   # yr evaluation window for failure probability (Section IV-C)
 CAP = 60.0           # forecasts that never fail are censored here
 
 

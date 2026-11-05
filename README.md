@@ -126,7 +126,7 @@ The table below reports RUL forecasting performance under **Scenario B** (mean $
 
 ## Maintenance Optimization Results
 
-Closed-loop lifecycle maintenance evaluation over a 20-year horizon for 1,500 simulated pipelines (inspections cost $30k, preventive replacements $100k, failures $15M total, discounted at 5%):
+Closed-loop lifecycle maintenance evaluation over a 20-year horizon for 1,500 simulated pipelines (inspections cost $50k, preventive replacements $200k, failures $15M total [$5M corrective repair + $10M environmental penalty], discounted at 5%):
 
 | Decision Model | Best Policy ($I^*$, $\gamma^*$) | Expected Cost | Pipeline Failure Rate | Cost at Paper's Policy ($I=2, \gamma=1.5$) |
 |---|---|---|---|---|

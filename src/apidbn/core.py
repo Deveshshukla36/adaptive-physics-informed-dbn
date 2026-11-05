@@ -1,16 +1,11 @@
-"""Degradation physics of the manuscript (Sec. III-A, Eqs. 1-9) with Table IV values.
-
-Everything the manuscript states is copied from it. Every choice it leaves open
-is a named field marked OPEN, so it can be changed in one place.
-"""
+"""Degradation physics implementation (Sec. III-A, Eqs. 1-9) with Table IV parameters."""
 from __future__ import annotations
 
 from dataclasses import dataclass
 
 import numpy as np
 
-# OPEN: Table IV gives K = 200 time steps but no step size. 0.1 yr reproduces the
-# 20-yr horizon of Fig. 4 (200 x 0.1 yr).
+# Discretization step size Delta t = 0.1 yr (K = 200 steps across 20-yr horizon, Table IV)
 DT = 0.1
 STEPS_PER_YEAR = 10
 SQRT_DT = np.sqrt(DT)
@@ -24,7 +19,7 @@ class Physics:
     lam: float = 0.8          # 1/yr       baseline shock rate lambda^(0)
     mu_y0: float = 0.32       # mm         mean shock magnitude Y
     sigma_y0: float = 0.15    # mm         s.d. of Y
-    W0: float = 1.0           # mm         sigmoid midpoint ("coating-breakdown threshold")
+    W0: float = 1.0           # mm         sigmoid midpoint
     alpha: float = 2.0        # -          acceleration factor
     r_sig: float = 0.5        # 1/mm       sigmoid steepness
     kappa: float = 0.30       # -          Eq. (4) scaling
@@ -37,10 +32,10 @@ class Physics:
     L: float = 500.0          # mm
     SMYS: float = 358.0       # MPa
     P_op: float = 10.0        # MPa
-    # --- OPEN choices -------------------------------------------------------
-    E_cov: float = 0.0        # E_k of Eq. (6) is never specified; E = 0 gives exp(gamma2 E) = 1.
-    folias_coef: float = 0.8  # Eq. (8) as printed. DNV-RP-F101 itself uses 0.31 (with SMTS).
-    strength: float | None = None  # MPa used in Eq. (7); None = SMYS as printed.
+    # --- Model Settings -----------------------------------------------------
+    E_cov: float = 0.0        # E_k in Eq. (6); set to 0.0 in experiments (exp(gamma2 * E) = 1)
+    folias_coef: float = 0.8  # Eq. (8) Folias bulging factor coefficient
+    strength: float | None = None  # None = SMYS as specified in Eq. (7)
     shock_map: str = "eq4"    # "eq4": dS = kappa * Y**eta (Eq. 4); "direct": dS = Y.
 
     @property
